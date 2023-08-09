@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="053fe524-744d-4a51-bafb-16bb6d973513" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Clojure Namespace" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="2M5xeRF3XWj5tiqNSpsVl4fk6kF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;cursive.last.file.extension./Users/andreulle/dev/expense-tracker/src&quot;: &quot;clj&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/andreulle/dev/expense-tracker&quot;
+  }
+}</component>
+  <component name="ReplState" timestamp="1690759081516">{:repl-history {:ide [], :local [{:command &quot;(clojure.test/run-tests)&quot;, :offset 23, :ns &quot;expense-tracker.service-test&quot;} {:command &quot;lein run-dev&quot;, :offset 12, :ns &quot;expense-tracker.server&quot;} {:command &quot;(-main)&quot;, :offset 6, :ns &quot;expense-tracker.diplomat.http-in&quot;}], :remote []}}</component>
+  <component name="RunManager" selected="Clojure REPL.REPL for expense-tracker">
+    <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="bbPath" value="" />
+      <setting name="parameters" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <setting name="workingDir" value="" />
+      <setting name="focusEditor" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="REPL for expense-tracker" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false" temporary="true">
+      <option name="configVersion" value="1" />
+      <option name="displayName" value="REPL for expense-tracker" />
+      <option name="execution" value="LEININGEN" />
+      <module name="expense-tracker" />
+      <option name="options" />
+      <option name="profiles" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local" activateToolWindowBeforeRun="false">
+      <option name="configVersion" value="1" />
+      <option name="execution" value="LEININGEN" />
+      <option name="options" />
+      <option name="profiles" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Remote" activateToolWindowBeforeRun="false">
+      <setting name="displayName" value="" />
+      <setting name="host" value="" />
+      <setting name="port" value="0" />
+      <setting name="replType" value="SOCKET" />
+      <setting name="configType" value="SPECIFY" />
+      <setting name="replPortFileType" value="STANDARD" />
+      <setting name="customPortFile" value="" />
+      <setting name="fixLineNumbers" value="false" />
+      <setting name="focusEditor" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Run tests in expense-tracker.service-test" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="expense-tracker" />
+      <option name="namespace" value="expense-tracker.service-test" />
+      <option name="selector" value="SINGLE_NS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test expense-tracker.service-test/home-page-test" type="ClojureTestRunConfiguration" factoryName="clojure.test" temporary="true">
+      <module name="expense-tracker" />
+      <option name="selector" value="SINGLE_VAR" />
+      <option name="varFqn" value="expense-tracker.service-test/home-page-test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Clojure REPL.REPL for expense-tracker" />
+        <item itemvalue="clojure.test.Test expense-tracker.service-test/home-page-test" />
+        <item itemvalue="clojure.test.Run tests in expense-tracker.service-test" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="053fe524-744d-4a51-bafb-16bb6d973513" name="Changes" comment="" />
+      <created>1677071347629</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677071347629</updated>
+    </task>
+    <servers />
+  </component>
+</project>
