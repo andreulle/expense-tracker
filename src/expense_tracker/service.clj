@@ -2,8 +2,9 @@
   (:require [io.pedestal.http :as http]
             [io.pedestal.http.route :as route]
             [io.pedestal.http.body-params :as body-params]
-            [expense-tracker.diplomat.http-in :as http-in]
-            [ring.util.response :as ring-resp]))
+            [expense-tracker.controller.expense :as controller.expense]
+            [ring.util.response :as ring-resp]
+            [clojure.data.json :as json]))
 
 (defn about-page
   [request]
@@ -15,6 +16,15 @@
   [request]
   (ring-resp/response "Hello Clojure!"))
 
+(defn category-by-month
+  [request]
+  (println (-> request :path-params :month))
+  (-> (controller.expense/get-expenses-from-datomic
+        (Integer/parseInt (-> request :path-params :month)))
+      json/write-str
+      ring-resp/response
+      (ring-resp/content-type "application/json")))
+
 ;; Defines "/" and "/about" routes with their associated :get handlers.
 ;; The interceptors defined after the verb map (e.g., {:get home-page}
 ;; apply to / and its children (/about).
@@ -22,7 +32,8 @@
 
 ;; Tabular routes
 (def routes #{["/" :get (conj common-interceptors `home-page)]
-              ["/about" :get (conj common-interceptors `about-page)]})
+              ["/about" :get (conj common-interceptors `about-page)]
+              ["/expenses/month/:month" :get (conj common-interceptors `category-by-month)]})
 
 ;; Map-based routes
 ;(def routes `{"/" {:interceptors [(body-params/body-params) http/html-body]

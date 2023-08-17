@@ -34,12 +34,18 @@
         seq
         (diplomat.datomic/save-expenses))))
 
+(defn initialize []
+  (println "\n Initializing DB...")
+  (println (diplomat.datomic/setup-schema))
+  (println "\n Getting data from Google Sheets...")
+  (get-expenses-from-sheets))
+
 (defn get-expenses-from-datomic
-  []
+  [month]
   (let [expenses (diplomat.datomic/find-all-expenses)]
     (->> expenses
          (map :sub-category)
          distinct
-         (map (partial logic.expense/group-sum expenses 8))
-         (sort-by :total-amount)
-         )))
+         (map (partial logic.expense/group-sum expenses month))
+         (filter #(> (:total-amount %) 0))
+         (sort-by :total-amount #(compare %2 %1)))))

@@ -6,9 +6,10 @@
 
 (d/create-database db-uri)
 
-(def conn (d/connect db-uri))
+(defn conn []
+  (d/connect db-uri))
 
-@(d/transact conn [{:db/doc "expense"}])
+@(d/transact (conn) [{:db/doc "expense"}])
 
 (def expense-schema [{:db/ident       :expense/card
                       :db/valueType   :db.type/string
@@ -47,19 +48,19 @@
 
 (defn setup-schema
   []
-  @(d/transact conn expense-schema))
+  @(d/transact (conn) expense-schema))
 
 (defn save-expenses
   [expenses]
-  @(d/transact conn expenses))
+  @(d/transact (conn) expenses))
 
-(def db (d/db conn))
+(defn db [] (d/db (conn)))
 
 (defn find-all-expenses
   []
   (->> (d/q '[:find (pull ?e [*])
               :where [?e :expense/card]]
-            db)
+            (db))
        flatten
        (map adapters.expense/datomic->model)))
 
@@ -71,7 +72,7 @@
               :where [?e :expense/card]
               [?e :expense/category ?cat]
               [?e :expense/month-number ?month]]
-            db category month)
+            (db) category month)
        flatten
        (map adapters.expense/datomic->model)))
 
@@ -83,6 +84,6 @@
               :where [?e :expense/card]
               [?e :expense/sub-category ?sub-cat]
               [?e :expense/month-number ?month]]
-            db category month)
+            (db) category month)
        flatten
        (map adapters.expense/datomic->model)))

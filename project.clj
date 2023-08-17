@@ -18,6 +18,7 @@
                  [org.slf4j/jul-to-slf4j "1.7.35"]
                  [org.slf4j/jcl-over-slf4j "1.7.35"]
                  [org.slf4j/log4j-over-slf4j "1.7.35"]
+                 [org.clojure/data.json "2.4.0"]
 
                  [org.clojure/clojure "1.10.3"]
                  [clj-http "3.12.0"]
